@@ -1,3 +1,4 @@
 ## Cmd
-
+```
 terraform destroy
+```
