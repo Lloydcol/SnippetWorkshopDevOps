@@ -1,9 +1,10 @@
 ## Initialize 
-
+```
 npm init -y
-
+```
 ## Creating an action metadata file (action.yml)
 
+```
 name: 'Hello World'
 description: 'Greet someone and record the time'
 inputs:
@@ -17,10 +18,11 @@ outputs:
 runs:
   using: 'node20'
   main: 'index.js'
-
+```
 
 ## Adding actions toolkit packages.
 
+```
 npm install @actions/core
 npm install @actions/github
 
@@ -41,42 +43,11 @@ try {
 } catch (error) {
   core.setFailed(error.message);
 }
-
-## The readme
-
-# Hello world javascript action
-
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
-
-## Inputs
-
-### `who-to-greet`
-
-**Required** The name of the person to greet. Default `"World"`.
-
-## Outputs
-
-### `time`
-
-The time we greeted you.
-
-## Example usage
-
-```yaml
-uses: actions/hello-world-javascript-action@e76147da8e5c81eaf017dede5645551d4b94427b
-with:
-  who-to-greet: 'Mona the Octocat'
 ```
-
-## Commit, tag and push your action to GH
-
-git add action.yml index.js node_modules/* package.json package-lock.json README.md
-git commit -m "My first action is ready"
-git tag -a -m "My first action release" v1.1
-git push --follow-tags
 
 ## Test action in a workflow
 
+```
 on: [push]
 
 jobs:
@@ -92,3 +63,4 @@ jobs:
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
+```
