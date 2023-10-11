@@ -1,0 +1,3 @@
+## Cmd
+
+terraform destroy
