@@ -1,3 +1,5 @@
+## main.tf
+```
 terraform {
   required_providers {
     docker = {
@@ -23,3 +25,4 @@ resource "docker_container" "nginx" {
     external = 8000
   }
 }
+```
